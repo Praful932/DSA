@@ -21,7 +21,7 @@ void dfs(int node)
     for(int i=0;i<adj[node].size();i++)    
     {
         // if not explored
-        if(!visited[node])
+        if(!visited[adj[node][i]])
             dfs(adj[node][i]);
     }
 }
