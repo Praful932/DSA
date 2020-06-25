@@ -14,6 +14,7 @@ void bfs(int n)
 {
     for(int i=1;i<=n;i++)
     {
+        // Multiple components
         if(!visited[i])
         {
             queue<int> q;
