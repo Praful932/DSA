@@ -8,6 +8,7 @@
 
 using namespace std;
 /*
+    Problem Code : 70
     Given n coins make steps
     5 coins
     *
