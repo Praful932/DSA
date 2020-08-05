@@ -7,25 +7,20 @@
     freopen("output.txt", "w", stdout);
 
 using namespace std;
-/*
-    Problem Code : 70
-    Given n coins make steps
-    5 coins
-    *
-    * *
-    * * 
-    2 steps
-*/
 int main()
 {
     OJ;
-    int t;
-    cin >> t;
-    while (t--)
+    vector<vector<int>> a(5, vector<int>(5,0));
+    int ans = 0;
+    loop(0,5)
     {
-        int n;
-        cin>>n;
-        cout<<int((0.5) * (sqrt(double(8 * n +1)) - 1))<<newline
+        for(int j=0;j<5;j++)
+        {
+            cin>>a[i][j];
+            if(a[i][j] == 1)
+                ans = abs(2 - i)  + abs(2 - j);
+        }
     }
+    cout<<ans<<newline
     return 0;
 }
