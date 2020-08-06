@@ -9,6 +9,8 @@
 using namespace std;
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     OJ;
     int t;
     cin >> t;
@@ -19,13 +21,15 @@ int main()
         vector<int> a(n, 0);
         loop(0,n)
             cin>>a[i];
-        int count = 0;
-        loop(0,n-1)
+        int count = 1;
+        int minspeed = a[0];
+        loop(1,n)
         {
-            if(a[i]>=a[i+1])
+            minspeed = min(a[i],minspeed);
+            if(a[i]<=minspeed)
                 count++;
         }
-        cout<<count+1<<newline
+        cout<<count<<newline
     }
     return 0;
 }
