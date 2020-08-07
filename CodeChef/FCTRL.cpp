@@ -1,37 +1,29 @@
 #include <bits/stdc++.h>
 #define ll long long
 #define newline "\n";
-#define loop(from, to) for (int i = from; i < to; i++)
-#define OJ                            \
+#define loop(from,to) for(int i=from;i<to;i++)
+#define OJ \
     freopen("input.txt", "r", stdin); \
     freopen("output.txt", "w", stdout);
 
 using namespace std;
 int main()
 {
+    /*
+        G.P till log n
+    */
     OJ;
-    int t;
+    ll t;
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
-        // closest multiple of 5
-        ll count =1;
-        if(n<=4)
-            cout<<0<<newline
-        else if(n<=9)
-            cout<<1<<newline
-        else
-        {
-            while(n>1)
-            {
-                count *= n;
-                n--;
-                cout<<n<<newline;
-            }
-            cout<<count<<newline
-        }
+        ll x;
+        cin >> x;
+        int n = log(x)/log(5);
+        ll factorcount = 0;
+        for(int i=1;i<=n;i++)
+            factorcount += floor(x/pow(5,i));
+        cout<<factorcount<<newline
     }
     return 0;
 }
