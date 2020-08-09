@@ -10,7 +10,8 @@ using namespace std;
 void sieve(ll a,ll b)
 {
     vector<bool> isprime(b+1,true);
-    isprime[0] = isprime[1] = isprime[2] = true;
+    isprime[0] = isprime[1] = false;
+    isprime[2] = true;
     for(ll i=2;i*i<=b;i++)
     {
         if(isprime[i])
