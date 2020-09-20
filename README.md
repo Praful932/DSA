@@ -1,5 +1,3 @@
 # DSA
 
-Algorithms and solved problems from CodeChef, CodeForces and LeetCode.
-
-Updated Every Day.
+This repository contains algorithm implementations and problems solved by me on various platforms like CodeChef, LeetCode, Hackerrank & CodeForces.
